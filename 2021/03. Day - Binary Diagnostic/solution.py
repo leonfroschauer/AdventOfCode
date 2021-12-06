@@ -12,7 +12,6 @@ print(part_1())
 
 
 def part_2():
-
     def calculate_rating(numbers: list, oxygen_generator: bool, i: int = 0):
         count_zero, count_one = 0, 0
         for number in numbers:
@@ -26,6 +25,7 @@ def part_2():
         else:
             numbers = [number for number in numbers if number[i] == "0"]
         return int(numbers[0], 2) if len(numbers) == 1 else calculate_rating(numbers, oxygen_generator, i + 1)
+
     return calculate_rating(plines, True) * calculate_rating(plines, False)
 
 
