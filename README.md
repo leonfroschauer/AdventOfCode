@@ -8,7 +8,6 @@ Code**!
 ## General
 ### Types of Files
 - **challenge.md**: Given challenge converted to markdown (Part one and part two)
-- **original.py**: Original Solution of the Challenge
 - **solution.py**: Clean Solution of the Challenge
 - *\[input.txt: Input file, given on the [adventofcode.com](https://adventofcode.com/) website]*
     - I don't upload my input files anymore and deleted old ones because Eric, the creator of AoC, wrote in 
