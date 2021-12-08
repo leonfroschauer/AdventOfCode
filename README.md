@@ -21,4 +21,6 @@ Code**!
 - [ ] [**2018**](https://adventofcode.com/2018)
 - [ ] [**2019**](https://adventofcode.com/2019)
 - [ ] [**2020**](https://adventofcode.com/2020)
-- [ ] [**2021**](https://adventofcode.com/2021) ([My solutions](https://github.com/leonfroschauer/AdventOfCode/tree/main/2021))
+- [ ] [**2021**](https://github.com/leonfroschauer/AdventOfCode/tree/main/2021/challenge.md)
+on [(AoC website)](https://adventofcode.com/2021)
+([My solutions](https://github.com/leonfroschauer/AdventOfCode/tree/main/2021))
