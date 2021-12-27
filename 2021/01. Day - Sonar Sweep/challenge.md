@@ -30,6 +30,7 @@ For example, suppose you had the following report:
 269
 260
 263
+
 ```
 
 This report indicates that, scanning outward from the submarine, the sonar sweep found depths of `199`, `200`, `208`,
@@ -52,6 +53,7 @@ measurement before the first measurement.) In the example above, the changes are
 269 (increased)
 260 (decreased)
 263 (increased)
+
 ```
 
 In this example, there are *`7`* measurements that are larger than the previous measurement.
@@ -75,6 +77,7 @@ Instead, consider sums of a *three-measurement sliding window*.  Again consideri
 269    F G H
 260      G H
 263        H
+
 ```
 
 Start by comparing the first and second three-measurement windows. The measurements in the first window are marked `A`
@@ -97,6 +100,7 @@ E: 647 (increased)
 F: 716 (increased)
 G: 769 (increased)
 H: 792 (increased)
+
 ```
 
 In this example, there are *`5`* sums that are larger than the previous sum.
