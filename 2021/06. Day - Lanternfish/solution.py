@@ -1,4 +1,5 @@
-puzzle = open("input.txt").read().strip()
+with open("input.txt") as file:
+    puzzle = file.read().strip()
 
 
 def part_1():

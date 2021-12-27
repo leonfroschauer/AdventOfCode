@@ -1,6 +1,5 @@
-puzzle = open("input.txt").read().strip()
-plines = puzzle.splitlines()
-plines = list(map(int, plines))
+with open("input.txt") as file:
+    plines = file.read().strip().splitlines()
 
 
 def part_1():

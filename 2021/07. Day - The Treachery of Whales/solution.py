@@ -1,4 +1,6 @@
-crabs = sorted(list(map(int, open("input.txt").read().strip().split(","))))
+with open("input.txt") as file:
+    puzzle = open("input.txt").read().strip()
+    crabs = sorted(list(map(int, puzzle.split(","))))
 
 
 def part_1():
@@ -11,7 +13,7 @@ print(part_1())
 
 def part_2():
     mean = sum(crabs) // len(crabs)
-    return sum((score := abs(crab - mean)) * (0.5 * score + 0.5) for crab in crabs)
+    return int(sum((score := abs(crab - mean)) * (0.5 * score + 0.5) for crab in crabs))
 
 
 print(part_2())
