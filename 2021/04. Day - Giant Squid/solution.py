@@ -1,4 +1,5 @@
-plines = open("input.txt").read().strip().splitlines()
+with open("input.txt") as file:
+    plines = file.read().strip().splitlines()
 
 
 def part_1():
