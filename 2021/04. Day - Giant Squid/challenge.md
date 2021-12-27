@@ -33,6 +33,7 @@ example:
 18  8 23 26 20
 22 11 13  6  5
  2  0 12  3  7
+
 ```
 
 After the first five numbers are drawn (`7`, `4`, `9`, `5`, and `11`), there are no winners, but the boards are marked
@@ -44,6 +45,7 @@ as follows (shown here adjacent to each other to save space):
 21  9 14 16  7        19  8  7 25 23        18  8 23 26 20
  6 10  3 18  5        20 11 10 24  4        22 11 13  6  5
  1 12 20 15 19        14 21 16 12  6         2  0 12  3  7
+
 ```
 
 After the next six numbers are drawn (`17`, `23`, `2`, `0`, `14`, and `21`), there are still no winners:
@@ -54,6 +56,7 @@ After the next six numbers are drawn (`17`, `23`, `2`, `0`, `14`, and `21`), the
 21  9 14 16  7        19  8  7 25 23        18  8 23 26 20
  6 10  3 18  5        20 11 10 24  4        22 11 13  6  5
  1 12 20 15 19        14 21 16 12  6         2  0 12  3  7
+
 ```
 
 Finally, `24` is drawn:
@@ -64,6 +67,7 @@ Finally, `24` is drawn:
 21  9 14 16  7        19  8  7 25 23        18  8 23 26 20
  6 10  3 18  5        20 11 10 24  4        22 11 13  6  5
  1 12 20 15 19        14 21 16 12  6         2  0 12  3  7
+
 ```
 
 At this point, the third board *wins* because it has at least one complete row or column of marked numbers (in this
