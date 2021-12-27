@@ -17,6 +17,7 @@ you to review. For example:
 3,4 -> 1,4
 0,0 -> 8,8
 5,5 -> 8,2
+
 ```
 
 Each line of vents is given as a line segment in the format `x1,y1 -> x2,y2` where `x1`,`y1` are the coordinates of one
@@ -44,6 +45,7 @@ So, the horizontal and vertical lines from the above list would produce the foll
 ..........
 ..........
 222111....
+
 ```
 
 In this diagram, the top left corner is `0,0` and the bottom right corner is `9,9`. Each position is shown as *the
@@ -82,6 +84,7 @@ Considering all lines from the above example would now produce the following dia
 .1.....1..
 1.......1.
 222111....
+
 ```
 
 You still need to determine *the number of points where at least two lines overlap*. In the above example, this is still
