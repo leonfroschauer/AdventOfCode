@@ -24,6 +24,7 @@ numbers in the diagnostic report. For example, given the following diagnostic re
 11001
 00010
 01010
+
 ```
 
 Considering only the first bit of each number, there are five `0` bits and seven `1` bits. Since the most common bit is
