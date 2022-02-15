@@ -1,24 +1,16 @@
 with open("input.txt") as file:
-    plines = file.read().strip().splitlines()
+    numbers = list(map(int, file.read().strip().splitlines()))
 
 
 def part_1():
-    result = 0
-    for x, y in zip(plines, plines[1:]):
-        if y > x:
-            result += 1
-    return result
+    return sum(num1 < num2 for num1, num2 in zip(numbers, numbers[1:]))
 
 
 print(part_1())
 
 
 def part_2():
-    result = 0
-    for x, y in zip(plines, plines[3:]):
-        if y > x:
-            result += 1
-    return result
+    return sum(num1 < num2 for num1, num2 in zip(numbers, numbers[3:]))
 
 
 print(part_2())
