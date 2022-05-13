@@ -31,3 +31,6 @@ Code**!
 4. Reload the page and look in the request headers for "cookie"
 5. Copy the cookie and paste it into the .env file
 
+<a href="https://github.com/leonfroschauer/AdventOfCode">
+    <img src="https://github.com/leonfroschauer/AdventOfCode/blob/main/.github/photos/Session_Cookie.png" width="700">
+</a>
