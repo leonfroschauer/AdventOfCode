@@ -22,3 +22,12 @@ Code**!
 - [ ] [**2019**](https://adventofcode.com/2019)
 - [ ] [**2020**](https://adventofcode.com/2020)
 - [ ] [**2021**](2021/2021.md) on [(AoC website)](https://adventofcode.com/2021) ([My solutions](2021))
+
+## AoC Setup Files
+### How to get the Session-Cookie (.env File)
+1. Login to adventofcode.com
+2. Go to any input page (for example [Day 1 of 2016](https://adventofcode.com/2016/day/1))
+3. Open your browser's developer console and navigate to the network tab
+4. Reload the page and look in the request headers for "cookie"
+5. Copy the cookie and paste it into the .env file
+
