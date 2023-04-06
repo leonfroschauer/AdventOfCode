@@ -6,6 +6,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 SESSION_COOKIE = getenv("SESSION")
+
+
 def submit(answer: Union[int, str], part: int, day: int, year: int, auto_submit: bool = False):
     res = requests.post(f"https://adventofcode.com/{year}/day/{day}/answer", cookies={"session": SESSION_COOKIE},
                         data={"level": part, "answer": str(answer)})

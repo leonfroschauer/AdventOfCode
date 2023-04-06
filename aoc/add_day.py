@@ -9,6 +9,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 SESSION_COOKIE = getenv("SESSION")
+
+
 def add_day(day: int, year: int) -> None:
     challenge = get_challenge_md(day, year)
     title = extract_challenge_name(challenge, day)
@@ -24,6 +26,8 @@ def add_day(day: int, year: int) -> None:
         create_file(dir_path + "original.py", template)
     if not path.exists(dir_path + "solution.py"):
         create_file(dir_path + "solution.py", open("templates/solution_template.py").read())
+
+
 def get_challenge_md(day: int, year: int) -> str:
     """Returns the Challenge in markdown syntax
         ---
@@ -47,6 +51,7 @@ def get_challenge_md(day: int, year: int) -> str:
         ---
         This function is basically copied from https://github.com/antonio-ramadas/aoc-to-markdown
         """
+
     # Simplification of https://github.com/dlon/html2markdown/blob/master/html2markdown.py
     def html_tags_to_markdown(tag: element.Tag, is_first_article: bool) -> None:
         """
@@ -98,6 +103,7 @@ def get_challenge_md(day: int, year: int) -> str:
             pass
         else:
             raise ValueError(f"Missing condition for tag: {tag.name}")
+
     res = requests.get(f"https://adventofcode.com/{year}/day/{day}", cookies={"session": SESSION_COOKIE})
     if res.ok:
         soup = BeautifulSoup(res.text, features="html.parser")
@@ -114,6 +120,8 @@ def get_challenge_md(day: int, year: int) -> str:
         return result
     print(f"Challenge could not be fetched! Code: {res.code}")
     return ""
+
+
 def extract_challenge_name(challenge_md: str, day: int) -> str:
     if challenge_md:
         title = challenge_md.split("\n")[0]
@@ -123,15 +131,21 @@ def extract_challenge_name(challenge_md: str, day: int) -> str:
     else:
         print("Name could not be extracted, because the text passed was empty!")
         return ""
+
+
 def get_puzzle_input(day: int, year: int) -> str:
     res = requests.get(f"https://adventofcode.com/{year}/day/{day}/input", cookies={"session": SESSION_COOKIE})
     if res.ok:
         return res.text
     print(f"Input could not be fetched! Code: {res.status_code}")
     return ""
+
+
 def create_file(file_path: str, content: str) -> None:
     with open(file_path, "w") as file:
         file.write(content)
+
+
 if __name__ == "__main__":
     if datetime.now().month == 12 and 1 <= datetime.now().day <= 25:
         add_day(datetime.now().day, datetime.now().year)

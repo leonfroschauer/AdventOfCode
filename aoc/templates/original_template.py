@@ -1,6 +1,5 @@
 from aoc import submit
 
-
 with open("input.txt") as file:
     puzzle = file.read().strip()
     plines = puzzle.splitlines()
@@ -13,6 +12,8 @@ def part_1():
 
 
 print(answer := part_1())
+
+
 # submit(answer, 1, %d, %y, True)
 
 def part_2():
