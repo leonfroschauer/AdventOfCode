@@ -1,6 +1,5 @@
 from re import match
 
-
 with open("input.txt") as file:
     puzzle = file.read().strip()
     plines = puzzle.splitlines()

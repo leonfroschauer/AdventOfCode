@@ -4,7 +4,7 @@ with open("input.txt") as file:
 
 
 def part_1():
-    median = crabs[len(crabs)//2]
+    median = crabs[len(crabs) // 2]
     return sum(abs(crab - median) for crab in crabs)
 
 

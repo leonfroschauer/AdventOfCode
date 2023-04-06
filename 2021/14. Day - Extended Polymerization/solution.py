@@ -1,6 +1,5 @@
 from collections import Counter
 
-
 with open("input.txt") as file:
     template, _, *rules = open("input.txt").read().split('\n')
     rules = dict(r.split(" -> ") for r in rules)

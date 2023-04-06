@@ -1,6 +1,5 @@
 from collections import defaultdict
 
-
 with open("input.txt") as file:
     plines = file.read().strip().splitlines()
 
