@@ -14,16 +14,21 @@ SESSION_COOKIE = getenv("SESSION")
 def add_day(day: int, year: int) -> None:
     challenge = get_challenge_md(day, year)
     title = extract_challenge_name(challenge, day)
+
     dir_name = f"{day:02d}- Day - {title}"
     dir_path = str(pathlib.Path(__file__).parent.resolve().parent.absolute()) + f"/{year}/{dir_name}/"
     makedirs(dir_path, exist_ok=True)
+
     create_file(dir_path + "input.txt", get_puzzle_input(day, year))
     create_file(dir_path + "challenge.md", challenge)
+
+    # add_day can also be called in order to update the input file or the challenge.md file -> don't override file
     if not path.exists(dir_path + "original.py"):
         template = open("templates/original_template.py").read()
         template = template.replace("%d", f'"{day}"')
         template = template.replace("%y", f'"{year}"')
         create_file(dir_path + "original.py", template)
+
     if not path.exists(dir_path + "solution.py"):
         create_file(dir_path + "solution.py", open("templates/solution_template.py").read())
 
@@ -125,8 +130,7 @@ def get_challenge_md(day: int, year: int) -> str:
 def extract_challenge_name(challenge_md: str, day: int) -> str:
     if challenge_md:
         title = challenge_md.split("\n")[0]
-        title = title.replace(f"# --- Day {day}: ", "")
-        title = title[:len(title) - 4]
+        title = title.replace(f"# --- Day {day}: ", "")[:len(title) - 4]
         return title
     else:
         print("Name could not be extracted, because the text passed was empty!")
@@ -135,8 +139,10 @@ def extract_challenge_name(challenge_md: str, day: int) -> str:
 
 def get_puzzle_input(day: int, year: int) -> str:
     res = requests.get(f"https://adventofcode.com/{year}/day/{day}/input", cookies={"session": SESSION_COOKIE})
+
     if res.ok:
         return res.text
+
     print(f"Input could not be fetched! Code: {res.status_code}")
     return ""
 
