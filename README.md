@@ -3,7 +3,7 @@ Advent of Code is an **Advent calendar** of small **programming puzzles** for a 
 that can be solved in any programming language you like. Since 2015 [Eric Wastle](https://was.tl/), the creator of 
 Advent of Code, publishes 25 Challenges from december the 1st to december the 25th. **Every challenge has two parts** 
 that work with the same input (given as a .txt file). In this repository you can see **my solutions for Advent of 
-Code**!
+Code**! 
 
 ## General
 ### Types of Files
